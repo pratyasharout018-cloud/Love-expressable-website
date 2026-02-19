@@ -1,0 +1,304 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html>
+<head>
+<title>For Avi ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+margin:0;
+padding:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#000000,#7a0000);
+color:white;
+overflow-x:hidden;
+}
+
+.page{
+display:none;
+min-height:100vh;
+width:100%;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:40px 20px;
+text-align:center;
+animation:fade 1s ease-in-out;
+}
+
+.active{display:flex;}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#ff0000;
+color:white;
+font-size:18px;
+cursor:pointer;
+margin-top:25px;
+}
+
+.envelope, .gift{
+width:200px;
+height:130px;
+background:white;
+margin:20px auto;
+cursor:pointer;
+position:relative;
+}
+
+.flap{
+position:absolute;
+width:0;
+height:0;
+border-left:100px solid transparent;
+border-right:100px solid transparent;
+border-top:65px solid #ff0000;
+top:0;
+transition:1s;
+transform-origin:top;
+}
+
+.envelope.open .flap{
+transform:rotateX(180deg);
+}
+
+.lid{
+width:200px;
+height:45px;
+background:#ff0000;
+position:absolute;
+top:0;
+transition:1s;
+}
+
+.gift.open .lid{
+top:-55px;
+}
+
+.ring{
+font-size:80px;
+cursor:pointer;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
+}
+
+.timer{
+font-size:60px;
+margin-top:20px;
+}
+
+.arrow{
+font-size:40px;
+cursor:pointer;
+margin-top:20px;
+animation:pulse 1s infinite;
+}
+
+.letter-box{
+max-width:800px;
+text-align:left;
+line-height:1.8;
+font-size:17px;
+margin-top:20px;
+}
+
+.petal,.balloon{
+position:fixed;
+top:-20px;
+font-size:20px;
+animation:fall 6s linear infinite;
+z-index:0;
+}
+
+@keyframes fall{
+0%{transform:translateY(0);}
+100%{transform:translateY(110vh);}
+}
+</style>
+</head>
+<body>
+
+<audio id="bgMusic" autoplay loop>
+<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+</audio>
+
+<audio id="heartbeat">
+<source src="https://www.soundjay.com/human/heartbeat-01a.mp3">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+<h1>❤️ Something Special For You Avi ❤️</h1>
+<button onclick="go(2)">Start</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+<h2>Open This 💌</h2>
+<div class="envelope" onclick="openEnvelope(this)">
+<div class="flap"></div>
+</div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+<h2>Avi, no matter what happens in life… you are never alone.</h2>
+<button onclick="go(4)">Continue</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+<h2>Touch The Ring 💍</h2>
+<div class="ring" onclick="go(5)">💍</div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+<h2>I will always stay with you, no matter what.</h2>
+<button onclick="go(6)">Continue</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+<h2>Open This Gift 🎁</h2>
+<div class="gift" onclick="openGift(this)">
+<div class="lid"></div>
+</div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+<h2>Whatever situation comes between us… we will stay together.</h2>
+<button onclick="go(8)">Continue</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+<h2>
+There is a special thing for you…<br><br>
+I wanted to tell you this from many days.<br><br>
+Today is the chance to tell you this.
+</h2>
+<div class="arrow" onclick="startCountdown()">⬇️</div>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page" id="p9">
+<h2>❤️</h2>
+<div class="timer" id="count">5</div>
+</div>
+
+<!-- PAGE 10 FULL LETTER -->
+<div class="page" id="p10">
+<h2>For Avi ❤️🖤</h2>
+
+<div class="letter-box">
+
+Dear Avi,<br><br>
+
+Kabhi kabhi life itni unpredictable hoti hai na… pata nahi kab kya ho jaaye.  
+But ek cheez main tumhe clearly kehna chahti hoon — jo bhi ho, tum kabhi akela nahi ho.<br><br>
+
+Please hamesha yaad rakhna… I will always stay with you in your life.  
+No matter what situation comes between us, main door jaane wali nahi hoon.<br><br>
+
+Agar tum kabhi sad feel karo, upset ho, ya andar se toot jao…  
+tum strong banne ka drama mat karo mere saamne.  
+Tum ro sakte ho. Tum apna gussa dikha sakte ho.  
+Main kabhi nahi jaaungi.<br><br>
+
+Main kabhi nahi bolungi “why are you crying?” ya “don’t cry.”  
+Tum insaan ho. Tum feel karte ho. Aur tumhe feel karne ka poora haq hai.<br><br>
+
+Agar koi problem ho, chahe directly bol pao ya nahi,  
+you can share it with me. Main sunne ke liye hoon.  
+Main bhaagne ke liye nahi hoon.<br><br>
+
+Even agar misunderstanding aaye…  
+hum solve karenge. Run nahi karenge.<br><br>
+
+Tum completely free ho mere saath.  
+Strong bhi. Weak bhi. Happy bhi. Angry bhi. Crying bhi.<br><br>
+
+You are not alone. And you will never be alone.<br><br>
+
+Always with you,<br>
+Pratyasha ❤️🖤
+
+</div>
+
+<h3 style="margin-top:40px;">
+I have a gift for you…<br>
+Not the least but the last gift for you.
+</h3>
+
+<button onclick="go(11)">Just Click On It 🎁</button>
+</div>
+
+<!-- PAGE 11 FINAL -->
+<div class="page" id="p11">
+<h1>I love you so so so so so much 😘</h1>
+<h2>💋💋💋</h2>
+</div>
+
+<script>
+
+function go(n){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById('p'+n).classList.add('active');
+createEffects();
+}
+
+function openEnvelope(el){
+el.classList.add("open");
+setTimeout(()=>go(3),1000);
+}
+
+function openGift(el){
+el.classList.add("open");
+setTimeout(()=>go(7),1000);
+}
+
+function startCountdown(){
+go(9);
+let heart=document.getElementById("heartbeat");
+heart.play();
+let time=5;
+let interval=setInterval(()=>{
+time--;
+document.getElementById("count").innerText=time;
+if(time==0){
+clearInterval(interval);
+heart.pause();
+go(10);
+}
+},1000);
+}
+
+function createEffects(){
+for(let i=0;i<6;i++){
+let el=document.createElement("div");
+el.className=Math.random()>0.5?"petal":"balloon";
+el.innerHTML=Math.random()>0.5?"🌹":"🎈";
+el.style.left=Math.random()*100+"%";
+el.style.animationDuration=(4+Math.random()*3)+"s";
+document.body.appendChild(el);
+}
+}
+
+</script>
+
+</body>
+</html>
